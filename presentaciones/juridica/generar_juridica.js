@@ -75,35 +75,35 @@ const TEXTOS = {
     "La causa principal es el pago bimestral del impuesto SIMPLE ($22.869.000), que julio no tuvo: antes de impuestos agosto ganó $29.055.833, 6,8% más que julio, gracias a un mejor resultado neto de la Unión Temporal.",
   ],
   puente: [
-    ["Operación: −$8,3 M. ", "Caen los ingresos netos ($6,4 M) y sube el costo de operación ($2,0 M)."],
-    ["Gastos admon.: −$3,1 M. ", "Sube la Unión Temporal (+$3,5 M) y bajan los gastos de personal ($2,7 M menos)."],
-    ["No operacional: +$13,3 M. ", "Suben los ingresos ($3,1 M) y bajan los gastos no operacionales ($10,2 M)."],
-    ["Impuesto SIMPLE: −$22,9 M. ", "Pago bimestral que julio no tuvo."],
+    ["Operación: −$8.348.988. ", "Caen los ingresos netos ($6.363.765) y sube el costo de operación ($1.985.223)."],
+    ["Gastos admon.: −$3.098.078. ", "Sube la Unión Temporal ($3.508.334) y bajan los gastos de personal ($2.657.243)."],
+    ["No operacional: +$13.297.168. ", "Suben los ingresos ($3.106.500) y bajan los gastos no operacionales ($10.190.668)."],
+    ["Impuesto SIMPLE: −$22.869.000. ", "Pago bimestral que julio no tuvo."],
   ],
-  tendencia: "Ingresos netos acumulados de enero a agosto. Tras el pico de junio ($102,2 M), los ingresos bajaron en julio (−26,6%) y agosto (−8,5%).",
-  composicion: "En agosto no hubo devoluciones (julio: $16,4 M, el mayor nivel del año), lo que amortiguó la caída del ingreso bruto. Actividades de consultoría · cifras en millones de pesos.",
+  tendencia: "Ingresos netos acumulados de enero a agosto. Tras el pico de junio ($102.167.217), los ingresos bajaron en julio (−26,6%) y agosto (−8,5%).",
+  composicion: "En agosto no hubo devoluciones (julio: $16.398.000, el mayor nivel del año), lo que amortiguó la caída del ingreso bruto. Actividades de consultoría · cifras en pesos colombianos.",
   concentracion: [
-    { text: "Los gastos de la Unión Temporal ($16,8 M) son el " },
+    { text: "Los gastos de la Unión Temporal ($16.769.915) son el " },
     { text: "41% del gasto del mes", options: { bold: true, color: "navy" } },
-    { text: " y subieron $3,5 M, más que el aumento total ($3,1 M); los gastos de personal bajaron $2,7 M." },
+    { text: " y subieron $3.508.334, más que el aumento total ($3.098.078); los gastos de personal bajaron $2.657.243." },
   ],
   factoresTitulo: "TRES FACTORES DETRÁS DEL RESULTADO DE AGOSTO",
   factores: [
-    ["01", "Pago bimestral del régimen SIMPLE", "$0", "$22,9 M",
+    ["01", "Pago bimestral del régimen SIMPLE", "$0", "$22.869.000",
       "El SIMPLE se paga cada dos meses (febrero, abril, junio, agosto). Julio no tuvo pago; agosto absorbió el bimestre completo y explica la mayor parte de la caída."],
-    ["02", "Menores ingresos de consultoría", "$91,4 M", "$68,6 M",
+    ["02", "Menores ingresos brutos de consultoría", "$91.410.054", "$68.648.289",
       "Los ingresos brutos cayeron 24,9%. Sin devoluciones en agosto, el ingreso neto bajó solo 8,5%, pero el margen bruto pasó de 71,5% a 66,0%."],
-    ["03", "Unión Temporal EVB Abogados", "−$1,4 M neto", "+$8,2 M neto",
-      "En agosto la UT aportó $35,5 M de ingreso no operacional frente a $27,3 M de gastos asociados ($16,8 M administrativos y $10,5 M no operacionales)."],
+    ["03", "Unión Temporal EVB Abogados · efecto neto", "−$1.363.844", "+$8.210.902",
+      "En agosto la UT aportó $35.524.015 de ingreso no operacional frente a $27.313.113 de gastos asociados ($16.769.915 administrativos y $10.543.198 no operacionales)."],
   ],
-  lecturaClave: "antes de impuestos agosto ganó más que julio (+6,8%). La caída de la utilidad neta la explica el SIMPLE; el punto a vigilar es la operación: ingresos brutos −24,9% y resultado operacional de solo $4,5 M.",
-  balance: "El activo corriente creció $34,4 M, impulsado por bancos (+$43,9 M); el pasivo corriente subió $34,0 M por el anticipo del SIMPLE por pagar ($44,6 M).",
+  lecturaClave: "antes de impuestos agosto ganó más que julio (+6,8%). La caída de la utilidad neta la explica el SIMPLE; el punto a vigilar es la operación: ingresos brutos −24,9% y resultado operacional de solo $4.548.272.",
+  balance: "El activo corriente creció $34.366.276, impulsado por bancos (+$43.872.497); el pasivo corriente subió $34.015.823 por el anticipo del SIMPLE por pagar ($44.639.000).",
   conclusiones: [
-    ["Ingresos netos −8,5% en agosto ", "($68,6 M vs $75,0 M en julio): los ingresos brutos cayeron 24,9%, compensados en parte porque no hubo devoluciones. El acumulado del año suma $619,0 M."],
-    ["Utilidad neta −77,3% ($6,2 M): ", "la explica el pago bimestral del SIMPLE ($22,9 M); antes de impuestos agosto ganó $29,1 M, 6,8% más que julio."],
-    ["Resultado operacional de $4,5 M (margen 6,6%): ", "menor ingreso, costo de operación +9,3% y gastos de administración +8,2%, impulsados por la Unión Temporal."],
-    ["Liquidez sólida pero menor: ", "razón corriente de 5,69 (vs 6,72) y endeudamiento de 9,7% (vs 8,1%), por el anticipo del SIMPLE por pagar ($44,6 M)."],
-    ["Patrimonio +0,3% y activo total +2,1%: ", "caja y bancos suben a $146,9 M (+43%) y la utilidad acumulada del año llega a $197,3 M."],
+    ["Ingresos netos −8,5% en agosto ", "($68.648.289 vs $75.012.054 en julio): los ingresos brutos cayeron 24,9%, compensados en parte porque no hubo devoluciones. El acumulado del año suma $618.969.676."],
+    ["Utilidad neta −77,3% ($6.186.833): ", "la explica el pago bimestral del SIMPLE ($22.869.000); antes de impuestos agosto ganó $29.055.833, 6,8% más que julio."],
+    ["Resultado operacional de $4.548.272 (margen 6,6%): ", "menor ingreso, costo de operación +9,3% y gastos de administración +8,2%, impulsados por la Unión Temporal."],
+    ["Liquidez sólida pero menor: ", "razón corriente de 5,69 (vs 6,72) y endeudamiento de 9,7% (vs 8,1%), por el anticipo del SIMPLE por pagar ($44.639.000)."],
+    ["Patrimonio +0,3% y activo total +2,1%: ", "caja y bancos suben a $146.850.434 (+43%) y la utilidad acumulada del año llega a $197.347.425."],
   ],
 };
 
@@ -125,6 +125,7 @@ R.neta.forEach((v, i) => {
   if (rep === undefined) return;
   if (Math.abs(rep - v) > 5) console.warn(`⚠ ${DATOS.meses[i]}: la utilidad calculada (${Math.round(v)}) no coincide con la del PDF (${rep}).`);
   R.neta[i] = rep;
+  R.rai[i] = rep + E.impuesto[i];
 });
 R.mb = serie((i) => (R.bruta[i] / R.netos[i]) * 100);
 R.mo = serie((i) => (R.oper[i] / R.netos[i]) * 100);
@@ -143,10 +144,11 @@ const num = (v, d = 1) => {
   const [e, f] = Math.abs(v).toFixed(d).split(".");
   return (v < 0 && +Math.abs(v).toFixed(d) !== 0 ? "-" : "") + e.replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (f ? "," + f : "");
 };
-const mm = (v) => num(v / 1e6, 1);
 const money = (v) => (v < 0 ? "-$" : "$") + num(Math.abs(v) / 1e6, 1) + " M";
 const sgn = (v, d = 1) => (+v.toFixed(d) >= 0 ? "+" : "−") + num(Math.abs(v), d);
-const varM = (a, b) => sgn((a - b) / 1e6);
+const pesos = (v) => (v < 0 ? "-$" : "$") + num(Math.abs(v), 0);
+const ent = (v) => num(v, 0);
+const varE = (a, b) => sgn(a - b, 0);
 const varP = (a, b) => (b === 0 ? "Nuevo" : sgn(((a - b) / Math.abs(b)) * 100) + "%");
 const fav = (a, b, sentido) => (Math.abs(a - b) < 1 ? null : (a - b) * sentido > 0);
 const flecha = (a, b) => (a >= b ? "▲ " : "▼ ");
@@ -321,7 +323,6 @@ pres.addSection({ title: "Portada" });
 pres.addSection({ title: "1. Resumen ejecutivo" });
 {
   const s = contenido("1 · RESUMEN EJECUTIVO", "1. Resumen ejecutivo", `RESUMEN EJECUTIVO - ${COMPARA.toUpperCase()}`);
-  const pesos = (v) => (v < 0 ? "-$" : "$") + num(Math.abs(v), 0);
   const kpi = (t, a, b, sentido) => ({
     t, v: money(a), lineas: [
       [pesos(a), false, null],
@@ -403,9 +404,9 @@ separador("2", "Análisis comparativo", "Estado de Resultados", `${COMPARA.toUpp
     const fill = zebra(i), f = fav(a, b, sen);
     return [
       TD(neg ? concepto.toUpperCase() : concepto, { fill, bold: neg, color: neg ? COL.navy : COL.ink }),
-      TD(mm(a), { fill, bold: true, color: COL.navy, align: "right" }),
-      TD(mm(b), { fill, color: COL.muted, align: "right" }),
-      TD(varM(a, b), { fill, bold: true, color: tono(f), align: "right" }),
+      TD(ent(a), { fill, bold: true, color: COL.navy, align: "right" }),
+      TD(ent(b), { fill, color: COL.muted, align: "right" }),
+      TD(varE(a, b), { fill, bold: true, color: tono(f), align: "right" }),
       TD(varP(a, b), { fill, bold: true, color: tono(f), align: "right" }),
     ];
   };
@@ -420,7 +421,7 @@ separador("2", "Análisis comparativo", "Estado de Resultados", `${COMPARA.toUpp
     x: 0.6, y: 1.5, w: 12.13, colW: [4.53, 1.9, 1.9, 1.9, 1.9], rowH: 0.38,
     border: BORDE(), margin: [0, 0.1, 0, 0.1], objectName: "Tabla cuadro de mando",
   });
-  texto(s, "Cifras en millones de pesos colombianos.   Código de color:  turquesa = favorable  ·  rojo = desfavorable", {
+  texto(s, "Cifras en pesos colombianos.   Código de color:  turquesa = favorable  ·  rojo = desfavorable", {
     name: "Nota de color", x: 0.6, y: 6.35, w: 12.13, h: 0.3, fontSize: 11, color: COL.muted, align: "right",
   });
 }
@@ -470,7 +471,7 @@ separador("2", "Análisis comparativo", "Estado de Resultados", `${COMPARA.toUpp
   texto(s, puntos.flatMap(([b, t], i) => [
     { text: b, options: { bold: true, color: COL.navy } },
     { text: t, options: { breakLine: i < puntos.length - 1, paraSpaceAfter: 10 } },
-  ]), { name: "Puente texto", x: 9.35, y: 2.2, w: 3.15, h: 4.3, fontSize: 13 });
+  ]), { name: "Puente texto", x: 9.35, y: 2.2, w: 3.2, h: 4.3, fontSize: 12 });
 }
 
 // ───────────────────────────── 7. EVOLUCIÓN DEL AÑO ─────────────────────────────
@@ -487,26 +488,26 @@ separador("2", "Análisis comparativo", "Estado de Resultados", `${COMPARA.toUpp
     valAxisLabelFormatCode: "#,##0", showLegend: true, legendPos: "b",
   }));
 
-  const sumI = suma(R.netos), sumU = suma(R.neta);
+  const sumI = suma(R.netos), sumU = E.utilidadAcumuladaReportada || suma(R.neta);
   const filas = [[TH("MES"), TH("INGRESOS"), TH("UTILIDAD"), TH("MARGEN")]];
   abrev.forEach((m, i) => {
     const fill = zebra(i), mg = R.mn[i];
     filas.push([
-      TD(m, { fill }), TD(mm(R.netos[i]), { fill, align: "right" }), TD(mm(R.neta[i]), { fill, align: "right" }),
+      TD(m, { fill }), TD(ent(R.netos[i]), { fill, align: "right", fontSize: 11 }), TD(ent(R.neta[i]), { fill, align: "right", fontSize: 11 }),
       TD(num(mg) + "%", { fill, align: "right", bold: true, color: mg >= 20 ? COL.teal : COL.amber }),
     ]);
   });
   const tot = { fill: { color: "F3F7FB" }, bold: true, color: COL.navy };
   filas.push([
-    TD("Total", tot), TD(mm(sumI), Object.assign({ align: "right" }, tot)), TD(mm(sumU), Object.assign({ align: "right" }, tot)),
+    TD("Total", tot), TD(ent(sumI), Object.assign({ align: "right", fontSize: 11 }, tot)), TD(ent(sumU), Object.assign({ align: "right", fontSize: 11 }, tot)),
     TD(num((sumU / sumI) * 100) + "%", Object.assign({ align: "right" }, tot)),
   ]);
   const rowH = 0.32;
-  s.addTable(filas, { x: 8.45, y: 1.5, w: 4.27, colW: [0.85, 1.17, 1.17, 1.08], rowH, border: BORDE(), margin: [0, 0.08, 0, 0.08], objectName: "Tabla evolución" });
+  s.addTable(filas, { x: 8.45, y: 1.5, w: 4.27, colW: [0.7, 1.27, 1.27, 1.03], rowH, border: BORDE(), margin: [0, 0.08, 0, 0.08], objectName: "Tabla evolución" });
 
   const yT = 1.5 + rowH * filas.length + 0.3, hT = 6.7 - yT;
   tarjeta(s, 8.45, yT, 4.27, hT, { name: "Tendencia" });
-  texto(s, money(sumI), { name: "Tendencia valor", x: 8.7, y: yT + 0.15, w: 3.8, h: 0.55, fontSize: 30, bold: true, color: COL.teal, valign: "middle" });
+  texto(s, pesos(sumI), { name: "Tendencia valor", x: 8.7, y: yT + 0.15, w: 3.8, h: 0.55, fontSize: 30, bold: true, color: COL.teal, valign: "middle" });
   texto(s, TEXTOS.tendencia, { name: "Tendencia texto", x: 8.7, y: yT + 0.75, w: 3.8, h: hT - 0.85, fontSize: 12, color: COL.ink });
 }
 
@@ -551,8 +552,8 @@ separador("3", "Composición y estructura", "Ingresos y Gastos", "DE INGRESO BRU
 // ───────────────────────────── 10. COMPOSICIÓN DE INGRESOS ─────────────────────────────
 {
   const s = contenido("3 · INGRESOS Y GASTOS", "3. Ingresos y gastos", "DE INGRESO BRUTO A INGRESO NETO");
-  const dev = (v) => (v === 0 ? "$0,0 M" : "-" + money(v));
-  const filas = [iB, iA].map((i) => [DATOS.meses[i].toUpperCase(), String(DATOS.anio), [money(E.ingresosBrutos[i]), dev(E.devoluciones[i]), money(R.netos[i])]]);
+  const dev = (v) => (v === 0 ? "$0" : "-" + pesos(v));
+  const filas = [iB, iA].map((i) => [DATOS.meses[i].toUpperCase(), String(DATOS.anio), [pesos(E.ingresosBrutos[i]), dev(E.devoluciones[i]), pesos(R.netos[i])]]);
   const cols = [
     { x: 2.35, w: 2.95, t: "INGRESOS BRUTOS" },
     { x: 6.0, w: 2.95, t: "(−) DEVOLUCIONES" },
@@ -565,7 +566,7 @@ separador("3", "Composición y estructura", "Ingresos y Gastos", "DE INGRESO BRU
     cols.forEach((c, i) => {
       tarjeta(s, c.x, y, c.w, h, { name: c.t + " " + mes, fill: c.dark ? COL.navy : COL.card, line: c.dark ? COL.navy : COL.line });
       texto(s, c.t, { name: "Etiqueta", x: c.x + 0.25, y: y + 0.2, w: c.w - 0.4, h: 0.28, fontSize: 12, bold: true, color: c.dark ? COL.sky : COL.muted });
-      texto(s, vals[i], { name: "Valor", x: c.x + 0.25, y: y + 0.52, w: c.w - 0.4, h: 0.55, fontSize: 30, bold: true, color: c.dark ? COL.white : i === 1 ? COL.red : COL.navy, valign: "middle" });
+      texto(s, vals[i], { name: "Valor", x: c.x + 0.25, y: y + 0.52, w: c.w - 0.4, h: 0.55, fontSize: 26, bold: true, color: c.dark ? COL.white : i === 1 ? COL.red : COL.navy, valign: "middle" });
       if (i < 2) {
         s.addShape(pres.shapes.RIGHT_ARROW, { x: c.x + c.w + 0.17, y: y + 0.45, w: 0.38, h: 0.35, fill: { color: COL.teal }, line: { color: COL.teal, width: 0 }, objectName: id("Flecha") });
       }
@@ -573,7 +574,7 @@ separador("3", "Composición y estructura", "Ingresos y Gastos", "DE INGRESO BRU
   });
   const variacion = (t, a, b, sentido) => {
     const d = a - b;
-    return [t, `${flecha(a, b)}${d >= 0 ? "+" : "−"}${money(Math.abs(d))}`, `${varP(a, b)} vs. ${mesB}`, tono(fav(a, b, sentido))];
+    return [t, `${flecha(a, b)}${d >= 0 ? "+" : "−"}${pesos(Math.abs(d))}`, `${varP(a, b)} vs. ${mesB}`, tono(fav(a, b, sentido))];
   };
   const vars = [
     variacion("VAR. INGRESOS BRUTOS", E.ingresosBrutos[iA], E.ingresosBrutos[iB], 1),
@@ -584,7 +585,7 @@ separador("3", "Composición y estructura", "Ingresos y Gastos", "DE INGRESO BRU
     const x = cols[i].x, w = cols[i].w, y = 4.65, h = 1.45;
     tarjeta(s, x, y, w, h, { name: t });
     texto(s, t, { name: "Etiqueta", x: x + 0.25, y: y + 0.18, w: w - 0.4, h: 0.28, fontSize: 12, bold: true, color: COL.muted });
-    texto(s, v, { name: "Valor", x: x + 0.25, y: y + 0.48, w: w - 0.4, h: 0.5, fontSize: 26, bold: true, color: c, valign: "middle" });
+    texto(s, v, { name: "Valor", x: x + 0.25, y: y + 0.48, w: w - 0.35, h: 0.5, fontSize: 22, bold: true, color: c, valign: "middle" });
     texto(s, d, { name: "Detalle", x: x + 0.25, y: y + 1.02, w: w - 0.4, h: 0.28, fontSize: 12, color: COL.muted });
   });
   texto(s, "VARIACIÓN", { name: "Var etiqueta", x: 0.6, y: 5.1, w: 1.6, h: 0.5, fontSize: 20, bold: true, color: COL.sea, valign: "middle" });
@@ -599,7 +600,7 @@ separador("3", "Composición y estructura", "Ingresos y Gastos", "DE INGRESO BRU
     { name: `${MES_A} ${DATOS.anio}`, labels: G.map((g) => g[0]), values: G.map((g) => +(g[1] / 1e6).toFixed(1)) },
     { name: `${MES_B} ${DATOS.anio}`, labels: G.map((g) => g[0]), values: G.map((g) => +(g[2] / 1e6).toFixed(1)) },
   ], Object.assign(ejeTexto(), {
-    x: 0.6, y: 1.45, w: 7.0, h: 5.25, objectName: "Gráfico gastos top 6",
+    x: 0.6, y: 1.45, w: 6.4, h: 5.25, objectName: "Gráfico gastos top 6",
     barDir: "bar", barGapWidthPct: 45, chartColors: [HEX.navy, HEX.teal], catAxisOrientation: "maxMin",
     showTitle: true, title: `${MES_B} vs ${mesA}, en millones de pesos`,
     showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "#,##0.0", dataLabelFontSize: 10, dataLabelColor: HEX.ink, dataLabelFontBold: true,
@@ -609,24 +610,24 @@ separador("3", "Composición y estructura", "Ingresos y Gastos", "DE INGRESO BRU
   G.forEach(([c, a, b], i) => {
     const fill = zebra(i);
     filas.push([
-      TD(c, { fill, fontSize: 11 }), TD(mm(a), { fill, bold: true, color: COL.navy, align: "right" }),
-      TD(mm(b), { fill, color: COL.muted, align: "right" }),
+      TD(c, { fill, fontSize: 11 }), TD(ent(a), { fill, bold: true, color: COL.navy, align: "right", fontSize: 11 }),
+      TD(ent(b), { fill, color: COL.muted, align: "right", fontSize: 11 }),
       TD(varP(a, b), { fill, bold: true, align: "right", color: tono(fav(a, b, -1)) }),
     ]);
   });
   const ta = E.gastosAdmon[iA], tb = E.gastosAdmon[iB], fl = { color: "F3F7FB" };
   filas.push([
     TD("TOTAL GASTOS ADMON. Y VENTAS", { fill: fl, bold: true, color: COL.navy, fontSize: 10 }),
-    TD(mm(ta), { fill: fl, bold: true, color: COL.navy, align: "right" }),
-    TD(mm(tb), { fill: fl, color: COL.muted, align: "right" }),
+    TD(ent(ta), { fill: fl, bold: true, color: COL.navy, align: "right", fontSize: 11 }),
+    TD(ent(tb), { fill: fl, color: COL.muted, align: "right", fontSize: 11 }),
     TD(varP(ta, tb), { fill: fl, bold: true, color: tono(fav(ta, tb, -1)), align: "right" }),
   ]);
-  s.addTable(filas, { x: 7.85, y: 1.5, w: 4.87, colW: [2.2, 0.85, 0.85, 0.97], rowH: 0.38, border: BORDE(), margin: [0, 0.08, 0, 0.08], objectName: "Tabla gastos" });
+  s.addTable(filas, { x: 7.2, y: 1.5, w: 5.52, colW: [2.2, 1.2, 1.15, 0.97], rowH: 0.38, border: BORDE(), margin: [0, 0.08, 0, 0.08], objectName: "Tabla gastos" });
 
-  tarjeta(s, 7.85, 4.75, 4.87, 1.6, { name: "Concentración" });
-  texto(s, "Concentración", { name: "Concentración título", x: 8.1, y: 4.92, w: 4.4, h: 0.38, fontSize: 18, bold: true, color: COL.sea });
-  texto(s, TEXTOS.concentracion, { name: "Concentración texto", x: 8.1, y: 5.38, w: 4.4, h: 0.9, fontSize: 13 });
-  texto(s, "Código de color:  turquesa = favorable  ·  rojo = desfavorable", { name: "Nota de color", x: 7.85, y: 6.45, w: 4.87, h: 0.25, fontSize: 10, color: COL.muted, align: "right" });
+  tarjeta(s, 7.2, 4.75, 5.52, 1.6, { name: "Concentración" });
+  texto(s, "Concentración", { name: "Concentración título", x: 7.45, y: 4.92, w: 5.05, h: 0.38, fontSize: 18, bold: true, color: COL.sea });
+  texto(s, TEXTOS.concentracion, { name: "Concentración texto", x: 7.45, y: 5.36, w: 5.05, h: 0.9, fontSize: 12 });
+  texto(s, "Código de color:  turquesa = favorable  ·  rojo = desfavorable", { name: "Nota de color", x: 7.2, y: 6.45, w: 5.52, h: 0.25, fontSize: 10, color: COL.muted, align: "right" });
 }
 
 // ───────────────────────────── 12. TRES FACTORES ─────────────────────────────
@@ -643,9 +644,9 @@ pres.addSection({ title: "4. Análisis de causas" });
       const bx = x + 0.25 + j * 1.75, by = y + 1.1;
       s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: bx, y: by, w: 1.65, h: 0.85, rectRadius: 0.08, fill: { color: COL.white }, line: { color: COL.line, width: 1 }, objectName: id("Factor " + l) });
       texto(s, l, { name: "Factor mes", x: bx, y: by + 0.08, w: 1.65, h: 0.25, fontSize: 11, bold: true, color: COL.muted, align: "center" });
-      texto(s, v, { name: "Factor valor", x: bx, y: by + 0.36, w: 1.65, h: 0.4, fontSize: v.length > 8 ? 16 : 20, bold: true, color: c, align: "center", valign: "middle" });
+      texto(s, v, { name: "Factor valor", x: bx, y: by + 0.36, w: 1.65, h: 0.4, fontSize: v.length > 8 ? 15 : 20, bold: true, color: c, align: "center", valign: "middle" });
     });
-    texto(s, d, { name: "Factor detalle", x: x + 0.25, y: y + 2.15, w: w - 0.5, h: 1.7, fontSize: 14, color: COL.ink });
+    texto(s, d, { name: "Factor detalle", x: x + 0.25, y: y + 2.1, w: w - 0.5, h: 1.75, fontSize: 13, color: COL.ink });
   });
   tarjeta(s, 0.6, 5.65, 12.13, 1.05, { name: "Lectura clave", fill: COL.navy, line: COL.navy });
   texto(s, [
@@ -682,13 +683,13 @@ separador("5", "Estado de Situación Financiera", "Balance e Indicadores", "LIQU
     const fill = tot ? { color: "F3F7FB" } : zebra(k++);
     filas.push([
       TD(r, { fill, bold: tot, color: tot ? COL.navy : COL.ink, fontSize: tot ? 11 : 12 }),
-      TD(mm(a), { fill, bold: true, color: COL.navy, align: "right" }),
-      TD(mm(b), { fill, color: COL.muted, align: "right" }),
-      TD(varM(a, b), { fill, bold: true, color: tono(f), align: "right" }),
-      TD(varP(a, b), { fill, bold: true, color: tono(f), align: "right" }),
+      TD(ent(a), { fill, bold: true, color: COL.navy, align: "right", fontSize: 11 }),
+      TD(ent(b), { fill, color: COL.muted, align: "right", fontSize: 11 }),
+      TD(varE(a, b), { fill, bold: true, color: tono(f), align: "right", fontSize: 11 }),
+      TD(varP(a, b), { fill, bold: true, color: tono(f), align: "right", fontSize: 11 }),
     ]);
   });
-  s.addTable(filas, { x: 0.6, y: 1.5, w: 7.45, colW: [2.85, 1.15, 1.15, 1.1, 1.2], rowH: 0.37, border: BORDE(), margin: [0, 0.08, 0, 0.08], objectName: "Tabla balance" });
+  s.addTable(filas, { x: 0.6, y: 1.5, w: 7.45, colW: [2.35, 1.4, 1.4, 1.3, 1.0], rowH: 0.37, border: BORDE(), margin: [0, 0.08, 0, 0.08], objectName: "Tabla balance" });
 
   tarjeta(s, 0.6, 6.05, 7.45, 0.65, { name: "Lectura balance" });
   texto(s, TEXTOS.balance, { name: "Lectura balance texto", x: 0.85, y: 6.05, w: 7.0, h: 0.65, fontSize: 12, color: COL.ink, valign: "middle" });
@@ -729,7 +730,7 @@ separador("5", "Estado de Situación Financiera", "Balance e Indicadores", "LIQU
   const tarj = [
     ["LIQUIDEZ", `${num(rc(BA), 2)} veces`, `Por cada peso de pasivo corriente hay $${num(rc(BA), 2)} de activo corriente (${mesB}: ${num(rc(BB), 2)}).`],
     ["SOLIDEZ", `${num((BA.pat / BA.at) * 100)}%`, `Del activo está financiado con patrimonio; el pasivo es el ${num(end(BA))}%.`],
-    ["RENTABILIDAD", `${num(roe(BA))}%`, `ROE acumulado: utilidad del año (${money(BA.resultado)}) sobre el patrimonio.`],
+    ["RENTABILIDAD", `${num(roe(BA))}%`, `ROE acumulado: utilidad del año (${pesos(BA.resultado)}) sobre el patrimonio.`],
   ];
   tarj.forEach(([t, v, d], i) => {
     const x = 0.6 + i * 4.115, y = 4.45, w = 3.9, h = 2.2;
