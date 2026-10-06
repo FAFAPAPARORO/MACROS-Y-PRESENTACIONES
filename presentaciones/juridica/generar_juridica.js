@@ -45,6 +45,9 @@ const DATOS = {
     ingresosNoOp: [14479.12, 28512.09, 19642.15, 63242452.82, 26514219.89, 102633816.89, 32436521.91, 35543021.99],
     gastosNoOp: [735455, 603190, 726548, 16545842, 940840, 35490180, 21226129, 11035461],
     impuesto: [0, 13151000, 0, 27993000, 0, 28617000, 0, 22869000],
+    // Resultado del ejercicio impreso en el PDF (se usa tal cual para mostrar cifras exactas al peso;
+    // el cálculo por componentes puede diferir en $1 por los decimales de los ingresos no operacionales).
+    utilidadReportada: [14367398, 1660746, 34373836, 18444744, 70624102, 24484035, 27205730, 6186833],
     utilidadAcumuladaReportada: 197347425, // control: debe coincidir con la suma de los meses
   },
 
@@ -68,8 +71,8 @@ const DATOS = {
 // ───────────────────────────── TEXTOS DE ANÁLISIS ─────────────────────────────
 const TEXTOS = {
   historia: [
-    "Los ingresos netos bajaron 8,5% en agosto y la utilidad neta cayó 77,3%, hasta $6,2 M.",
-    "La causa principal es el pago bimestral del impuesto SIMPLE ($22,9 M), que julio no tuvo: antes de impuestos agosto ganó $29,1 M, 6,8% más que julio, gracias a un mejor resultado neto de la Unión Temporal.",
+    "Los ingresos netos bajaron 8,5% en agosto ($68.648.289 frente a $75.012.054 en julio) y la utilidad neta cayó 77,3%, hasta $6.186.833.",
+    "La causa principal es el pago bimestral del impuesto SIMPLE ($22.869.000), que julio no tuvo: antes de impuestos agosto ganó $29.055.833, 6,8% más que julio, gracias a un mejor resultado neto de la Unión Temporal.",
   ],
   puente: [
     ["Operación: −$8,3 M. ", "Caen los ingresos netos ($6,4 M) y sube el costo de operación ($2,0 M)."],
@@ -117,6 +120,12 @@ R.bruta = serie((i) => R.netos[i] - E.costos[i]);
 R.oper = serie((i) => R.bruta[i] - E.gastosAdmon[i]);
 R.rai = serie((i) => R.oper[i] + E.ingresosNoOp[i] - E.gastosNoOp[i]);
 R.neta = serie((i) => R.rai[i] - E.impuesto[i]);
+R.neta.forEach((v, i) => {
+  const rep = E.utilidadReportada && E.utilidadReportada[i];
+  if (rep === undefined) return;
+  if (Math.abs(rep - v) > 5) console.warn(`⚠ ${DATOS.meses[i]}: la utilidad calculada (${Math.round(v)}) no coincide con la del PDF (${rep}).`);
+  R.neta[i] = rep;
+});
 R.mb = serie((i) => (R.bruta[i] / R.netos[i]) * 100);
 R.mo = serie((i) => (R.oper[i] / R.netos[i]) * 100);
 R.mn = serie((i) => (R.neta[i] / R.netos[i]) * 100);
@@ -312,22 +321,33 @@ pres.addSection({ title: "Portada" });
 pres.addSection({ title: "1. Resumen ejecutivo" });
 {
   const s = contenido("1 · RESUMEN EJECUTIVO", "1. Resumen ejecutivo", `RESUMEN EJECUTIVO - ${COMPARA.toUpperCase()}`);
+  const pesos = (v) => (v < 0 ? "-$" : "$") + num(Math.abs(v), 0);
   const kpi = (t, a, b, sentido) => ({
-    t, v: money(a), l1: `${MES_B}: ${money(b)}`, l2: `${flecha(a, b)}${varP(a, b)} vs. ${mesB}`, c2: tono(fav(a, b, sentido)),
+    t, v: money(a), lineas: [
+      [pesos(a), false, null],
+      [`${MES_B}: ${pesos(b)}`, false, null],
+      [`${flecha(a, b)}${varP(a, b)} vs. ${mesB}`, true, tono(fav(a, b, sentido))],
+    ],
   });
   const kpis = [
     kpi("INGRESOS NETOS", R.netos[iA], R.netos[iB], 1),
     kpi("ACTIVO TOTAL", BA.at, BB.at, 1),
     kpi("PATRIMONIO", BA.pat, BB.pat, 1),
-    { t: "UTILIDAD NETA", v: money(R.neta[iA]), l1: `Margen neto ${num(R.mn[iA])}%`, l2: `${MES_B}: ${money(R.neta[iB])}  (${varP(R.neta[iA], R.neta[iB])})`, c2: COL.white, dark: true },
+    { t: "UTILIDAD NETA", v: money(R.neta[iA]), dark: true, lineas: [
+      [`${pesos(R.neta[iA])} · margen ${num(R.mn[iA])}%`, false, null],
+      [`${MES_B}: ${pesos(R.neta[iB])}`, false, null],
+      [`${flecha(R.neta[iA], R.neta[iB])}${varP(R.neta[iA], R.neta[iB])} vs. ${mesB}`, true, COL.white],
+    ] },
   ];
   kpis.forEach((k, i) => {
-    const x = 0.6 + i * 3.08, y = 1.5, w = 2.88, h = 1.95;
+    const x = 0.6 + i * 3.08, y = 1.45, w = 2.88, h = 2.15;
     tarjeta(s, x, y, w, h, { name: "KPI " + k.t, fill: k.dark ? COL.navy : COL.card, line: k.dark ? COL.navy : COL.line });
-    texto(s, k.t, { name: "KPI etiqueta", x: x + 0.25, y: y + 0.25, w: w - 0.4, h: 0.3, fontSize: 13, bold: true, color: k.dark ? COL.white : COL.muted });
-    texto(s, k.v, { name: "KPI valor", x: x + 0.25, y: y + 0.58, w: w - 0.4, h: 0.6, fontSize: 32, bold: true, color: k.dark ? COL.white : COL.navy, valign: "middle" });
-    texto(s, k.l1, { name: "KPI detalle", x: x + 0.25, y: y + 1.24, w: w - 0.4, h: 0.26, fontSize: 12, color: k.dark ? COL.sky : COL.muted });
-    texto(s, k.l2, { name: "KPI variación", x: x + 0.25, y: y + 1.52, w: w - 0.4, h: 0.26, fontSize: 12, bold: true, color: k.c2 });
+    texto(s, k.t, { name: "KPI etiqueta", x: x + 0.25, y: y + 0.2, w: w - 0.4, h: 0.3, fontSize: 13, bold: true, color: k.dark ? COL.white : COL.muted });
+    texto(s, k.v, { name: "KPI valor", x: x + 0.25, y: y + 0.5, w: w - 0.4, h: 0.6, fontSize: 32, bold: true, color: k.dark ? COL.white : COL.navy, valign: "middle" });
+    k.lineas.forEach(([t, b, c], j) => {
+      texto(s, t, { name: j === 0 ? "KPI valor completo" : j === 1 ? "KPI mes anterior" : "KPI variación", x: x + 0.25, y: y + 1.17 + j * 0.29, w: w - 0.35, h: 0.26, fontSize: 12, bold: b || j === 0,
+        color: c || (k.dark ? (j === 0 ? COL.white : COL.sky) : (j === 0 ? COL.navy : COL.muted)) });
+    });
   });
 
   const cats = ["Ingresos netos", "Utilidad bruta", "Gastos admon. y ventas", "Utilidad neta"];
@@ -336,7 +356,7 @@ pres.addSection({ title: "1. Resumen ejecutivo" });
     { name: `${MES_A} ${DATOS.anio}`, labels: cats, values: val(iA) },
     { name: `${MES_B} ${DATOS.anio}`, labels: cats, values: val(iB) },
   ], Object.assign(ejeTexto(), {
-    x: 0.6, y: 3.7, w: 7.6, h: 3.05, objectName: "Gráfico comparativo",
+    x: 0.6, y: 3.85, w: 7.6, h: 2.9, objectName: "Gráfico comparativo",
     barDir: "col", barGapWidthPct: 60, chartColors: [HEX.navy, HEX.teal],
     showTitle: true, title: `${MES_B} vs ${mesA}, en millones de pesos`,
     showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: '"$"#,##0.0', dataLabelFontSize: 10, dataLabelColor: HEX.ink, dataLabelFontBold: true,
@@ -344,10 +364,10 @@ pres.addSection({ title: "1. Resumen ejecutivo" });
     showLegend: true, legendPos: "b",
   }));
 
-  tarjeta(s, 8.45, 3.7, 4.27, 3.05, { name: "Lectura del mes" });
-  texto(s, "La historia del mes", { name: "Lectura título", x: 8.75, y: 3.95, w: 3.7, h: 0.38, fontSize: 18, bold: true, color: COL.sea });
+  tarjeta(s, 8.45, 3.85, 4.27, 2.9, { name: "Lectura del mes" });
+  texto(s, "La historia del mes", { name: "Lectura título", x: 8.75, y: 4.02, w: 3.7, h: 0.38, fontSize: 18, bold: true, color: COL.sea });
   texto(s, TEXTOS.historia.map((t, i) => ({ text: t, options: { breakLine: i < TEXTOS.historia.length - 1, paraSpaceAfter: 8 } })),
-    { name: "Lectura texto", x: 8.75, y: 4.42, w: 3.7, h: 2.2, fontSize: 13, color: COL.ink });
+    { name: "Lectura texto", x: 8.75, y: 4.47, w: 3.75, h: 2.2, fontSize: 12, color: COL.ink });
 }
 
 // ───────────────────────────── 4. SEPARADOR · ESTADO DE RESULTADOS ─────────────────────────────
