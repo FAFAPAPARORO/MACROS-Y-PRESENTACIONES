@@ -14,11 +14,14 @@ npm install
 
 | Comando | Salida |
 |---|---|
-| `npm run juridica` | `presentaciones/juridica/Analisis_Financiero_Juridica_Junio_2026.pptx` |
+| `npm run juridica` | `presentaciones/juridica/Analisis_Financiero_Juridica_Agosto_2026.pptx` (julio vs agosto 2026) |
 
-Todas las cifras, textos, tablas y gráficos de cada presentación están en el
-bloque `DATOS` al inicio de su generador. Para actualizar un mes, se cambian
-esos valores y se vuelve a ejecutar el comando.
+Cada generador tiene al inicio un bloque `DATOS` con las cifras en pesos
+(estado de resultados mes a mes, balance de los dos meses comparados y detalle
+de gastos) y un bloque `TEXTOS` con la redacción del análisis. Tablas, tarjetas,
+gráficos, márgenes, indicadores y el puente de utilidad se calculan solos a partir
+de `DATOS`. Para actualizar un mes se agregan las cifras nuevas, se ajustan los
+textos y se vuelve a ejecutar el comando.
 
 El `.pptx` resultante es 100 % editable: los gráficos son nativos de
 PowerPoint (clic derecho → *Editar datos*), las tablas son tablas reales y
