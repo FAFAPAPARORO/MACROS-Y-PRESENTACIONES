@@ -34,13 +34,12 @@ const DATOS = {
   // Meses del año con cierre. El último es el mes actual y el penúltimo el mes de comparación.
   meses: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto"],
 
-  // Estado de resultado integral, mes a mes (fuente: EEFF a 31 de agosto de 2026).
+  // Estado de resultado integral, mes a mes (fuente: EEFF corregidos a 31 de agosto de 2026).
   er: {
     ingresosBrutos: [68143710, 73029822, 75134467, 79319558, 96131805, 109170837, 91410054, 68648289],
     devoluciones: [4982250, 2135250, 711750, 5800763, 4987233, 7003620, 16398000, 0],
-    // Total costos de operación. Julio y agosto incluyen la mano de obra indirecta
-    // (asesoría jurídica, intangibles, gastos de viaje: $5.885.521 y $7.087.256) que
-    // el subtotal mensual del PDF omite pero que sí está en el acumulado ($163.689.638).
+    // Total costos de operación (fuente: EEFF a agosto 2026 corregidos, con la mano de
+    // obra indirecta de julio y agosto ya incluida en el total del mes).
     costos: [19428771, 19301954, 19684195, 20258395, 22188262, 18151432, 21345703, 23330926],
     gastosAdmon: [28644316, 36206194, 19657780, 53519267, 23905588, 98058387, 37671013, 40769091],
     ingresosNoOp: [14479.12, 28512.09, 19642.15, 63242452.82, 26514219.89, 102633816.89, 32436521.91, 35543021.99],
@@ -52,7 +51,7 @@ const DATOS = {
   // Estado de situación financiera de los dos meses comparados.
   balance: {
     act: { ac: 1075010530, anc: 939078918, pc: 188850155, pnc: 5985894, pat: 1819253399, resultado: 197347425 },
-    ant: { ac: 1040544452, anc: 932524991, pc: 154055635, pnc: 6310348, pat: 1812703461, resultado: 190797487 },
+    ant: { ac: 1040644254, anc: 932524991, pc: 154834332, pnc: 5268348, pat: 1813066565, resultado: 191160592 },
   },
 
   // Gastos de administración y ventas: los 6 rubros más grandes del mes [nombre, mes actual, mes anterior]
@@ -95,13 +94,13 @@ const TEXTOS = {
       "En agosto la UT aportó $35,5 M de ingreso no operacional frente a $27,3 M de gastos asociados ($16,8 M administrativos y $10,5 M no operacionales)."],
   ],
   lecturaClave: "antes de impuestos agosto ganó más que julio (+6,8%). La caída de la utilidad neta la explica el SIMPLE; el punto a vigilar es la operación: ingresos brutos −24,9% y resultado operacional de solo $4,5 M.",
-  balance: "El activo corriente creció $34,5 M, impulsado por bancos (+$43,9 M); el pasivo corriente subió $34,8 M por el anticipo del SIMPLE por pagar ($44,6 M).",
+  balance: "El activo corriente creció $34,4 M, impulsado por bancos (+$43,9 M); el pasivo corriente subió $34,0 M por el anticipo del SIMPLE por pagar ($44,6 M).",
   conclusiones: [
     ["Ingresos netos −8,5% en agosto ", "($68,6 M vs $75,0 M en julio): los ingresos brutos cayeron 24,9%, compensados en parte porque no hubo devoluciones. El acumulado del año suma $619,0 M."],
     ["Utilidad neta −77,3% ($6,2 M): ", "la explica el pago bimestral del SIMPLE ($22,9 M); antes de impuestos agosto ganó $29,1 M, 6,8% más que julio."],
     ["Resultado operacional de $4,5 M (margen 6,6%): ", "menor ingreso, costo de operación +9,3% y gastos de administración +8,2%, impulsados por la Unión Temporal."],
-    ["Liquidez sólida pero menor: ", "razón corriente de 5,69 (vs 6,75) y endeudamiento de 9,7% (vs 8,1%), por el anticipo del SIMPLE por pagar ($44,6 M)."],
-    ["Patrimonio +0,4% y activo total +2,1%: ", "caja y bancos suben a $146,9 M (+43%) y la utilidad acumulada del año llega a $197,3 M."],
+    ["Liquidez sólida pero menor: ", "razón corriente de 5,69 (vs 6,72) y endeudamiento de 9,7% (vs 8,1%), por el anticipo del SIMPLE por pagar ($44,6 M)."],
+    ["Patrimonio +0,3% y activo total +2,1%: ", "caja y bancos suben a $146,9 M (+43%) y la utilidad acumulada del año llega a $197,3 M."],
   ],
 };
 
