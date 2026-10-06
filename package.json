@@ -1,0 +1,13 @@
+{
+  "name": "macros-y-presentaciones",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Generadores de presentaciones financieras ACONTIS",
+  "scripts": {
+    "juridica": "node presentaciones/juridica/generar_juridica.js"
+  },
+  "dependencies": {
+    "jszip": "^3.10.2",
+    "pptxgenjs": "^4.0.1"
+  }
+}
