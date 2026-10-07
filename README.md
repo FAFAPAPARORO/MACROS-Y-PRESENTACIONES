@@ -15,6 +15,7 @@ npm install
 | Comando | Salida |
 |---|---|
 | `npm run juridica` | `presentaciones/juridica/Analisis_Financiero_Juridica_Agosto_2026.pptx` (julio vs agosto 2026) |
+| `npm run madr` | `presentaciones/madr/Propuesta_MADR_Fondo_Nacional_del_Arroz.pptx` (propuesta comercial y económica para el MADR) |
 
 Cada generador tiene al inicio un bloque `DATOS` con las cifras en pesos
 (estado de resultados mes a mes, balance de los dos meses comparados y detalle
@@ -28,5 +29,3 @@ PowerPoint (clic derecho → *Editar datos*), las tablas son tablas reales y
 cada texto es un cuadro de texto independiente.
 
 Los recursos gráficos compartidos (fondo y logos ACONTIS) están en `assets/acontis/`.
-
-| `npm run madr` | `presentaciones/madr/Propuesta_MADR_Fondo_Nacional_del_Arroz.pptx` (propuesta comercial y económica para el MADR) |
