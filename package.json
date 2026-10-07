@@ -4,7 +4,8 @@
   "private": true,
   "description": "Generadores de presentaciones financieras ACONTIS",
   "scripts": {
-    "juridica": "node presentaciones/juridica/generar_juridica.js"
+    "juridica": "node presentaciones/juridica/generar_juridica.js",
+    "madr": "node presentaciones/madr/generar_madr.js"
   },
   "dependencies": {
     "jszip": "^3.10.2",
